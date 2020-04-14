@@ -15,7 +15,7 @@ function loadData(){
     
     request.onreadystatechange = function() {      // fonction pour analyser le process de la requete envoyé
         console.log(this);
-        
+
         if(this.readyState == 4 && this.status == 200){
 
             result.innerHTML=this.response;    
@@ -27,7 +27,7 @@ function loadData(){
         }   
     };
 
-    request.open('GET', 'data.txt'); // Charger les données à partir  le fichier data.txt
+    request.open('GET', 'data.txt',true); // Charger les données à partir  le fichier data.txt
     request.responseType = 'text';
     request.send();
 
