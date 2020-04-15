@@ -1,4 +1,4 @@
-# Contextee
+# Contexte
 A la fin de cette serie de défis vous serai capable à repondre aux questions concerant la programmation Javascript Asynchrone `AJAX` en travaillant avec des technologies tel que `XMLHttpRequest` et `Fetch` API pour extraire des données en format `brutes` ou en format `JSON`. Vous serez capable de :
 
 1. Différencier entre la programmation Synchrone et la programmation Asynchrone
@@ -41,3 +41,20 @@ A la fin de ce défi vous allez apprendre à extraire les données à partir d'u
 - Charger les données à partir des données dans le fichier `JSON`
 
 - Inserer les données les données à l'interieur de la balise `#customer` & `#customers`
+
+## Défi 3 : CRUD sur un REST API
+
+A la fin de ce défi vous allez apprendre à manipuler les données coté serveur en utilisant un API, fake, REST que nous allons créer en utilisant json-sever. C'est API nous permettera d'avoir accès à une liste des livres enregistrées dans le fichier db.json. Procèdant comme suit :
+
+
+- Installez le package json-server (https://www.npmjs.com/package/json-server) en utilisant NPM
+
+- Utilisez cet outil pour générer le lien de l'API en se basant sur le fichiers db.json
+
+- Par XMLHttpRequest, effectuez du CRUD (Create, Remove,Update et Delete) en se basant sur les requêtes : GET POST PUT DELETE
+
+- Par Festch API, effectuez du CRUD (Create, Read,Update et Delete) en se basant sur les requêtes : GET POST PUT DELETE
+
+- Par Festch API & Asynch/await effectuez du CRUD (Create, Remove,Update et Delete) en se basant sur les requêtes : GET POST PUT DELETE
+
+NB : Affichez la liste des livres dans un tableau HTML
