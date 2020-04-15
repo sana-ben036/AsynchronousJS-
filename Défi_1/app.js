@@ -14,6 +14,8 @@ function loadData(){
     var request= new XMLHttpRequest(); // Créer un objet XMLHttpRequest
 
     var result= document.getElementById('output'); //  declarer l'emplacement d'affichage de resultat de la requete
+
+    
     
     request.onload= function() {      // fonction pour analyser le process de la requete envoyé
         console.log(this);

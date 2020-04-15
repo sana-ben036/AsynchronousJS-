@@ -23,10 +23,16 @@ function loadCustomer() {
 
 
     request1.onload = function () {
+        console.log(this);
 
-       result1.innerHTML=this.responseText;
-
+        if(this.readyState == 4 && this.status == 200){
+            result1.innerHTML=this.response; 
+        }else if(this.readyState == 4 && this.status == 404){
+            alert('Erreur 404');
+        }
+            
     };
+
     request1.open('GET', 'customer.json');
     request1.send();
 
@@ -41,9 +47,16 @@ function loadCustomers() {
 
     request2.onload = function () {
 
-    result2.innerHTML= this.responseText;
+        console.log(this);
 
+        if(this.readyState == 4 && this.status == 200){
+            result2.innerHTML=this.response; 
+        }else if(this.readyState == 4 && this.status == 404){
+            alert('Erreur 404');
+        }
+            
     };
+
     request2.open('GET', 'customers.json');
     request2.send();
 
