@@ -26,7 +26,7 @@ function loadCustomer() {
         
         if(this.readyState == 4 && this.status == 200){
             var customer = this.response; 
-            output1.innerHTML= '<ul><li> id :' + customer.id +'</li><li> name :' + customer.name +'</li><li> company :' + customer.company +'</li><li> phone :' + customer.phone +'</li></ul>'
+            output1.innerHTML= `<ul><li> id : ${customer.id}  </li><li> name :  ${customer.name} </li><li> company : ${customer.company} </li><li> phone : ${customer.phone} </li></ul>`
 
         }else if(this.readyState == 4 && this.status == 404){
             alert('Erreur 404');
@@ -52,16 +52,15 @@ function loadCustomers() {
         console.log(this);
 
         if(this.readyState == 4 && this.status == 200){
-            var data =this.response; 
-            var customer = data.customer;
+            var customers =this.response; 
 
-            for( var i=0; i<customer.length; i++){
+            for( var i in customers ){
 
-                output2.innerHTML = '<ul><li> id :' + customer[0].id +'</li><li> name :' + customer[0].name +'</li><li> company :' + customer[0].company +'</li><li> phone :' + customer[0].phone +'</li></ul>'
+                output2.innerHTML = `<ul><li> id : ${customers[0].id}  </li><li> name :  ${customers[0].name} </li><li> company : ${customers[0].company} </li><li> phone : ${customers[0].phone} </li></ul>
+                                     <br><ul><li> id : ${customers[1].id}  </li><li> name :  ${customers[1].name} </li><li> company : ${customers[1].company} </li><li> phone : ${customers[1].phone} </li></ul>
+                                     <br><ul><li> id : ${customers[2].id}  </li><li> name :  ${customers[2].name} </li><li> company : ${customers[2].company} </li><li> phone : ${customers[2].phone} </li></ul>`
 
-               
-
-
+            
             }
 
         }else if(this.readyState == 4 && this.status == 404){
