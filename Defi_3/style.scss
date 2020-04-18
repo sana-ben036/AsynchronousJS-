@@ -1,0 +1,58 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; }
+  
+  body {
+    width: 80%;
+    font-family: Cairo;
+    font-size: 1.5em;
+    margin: auto;
+    text-align: center;
+ }
+
+nav{
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    .menu{
+        width: 20%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        &_item{
+            &--with{
+                width: 22%;
+            }
+        }
+        p{
+            font-size: small;
+            font-weight: bold;
+            position: relative;
+            top:100px;
+            right: 180px;
+        }
+        
+    }
+    .logo{
+        width: 20%;
+    }
+
+}
+.search{
+    height: 200px;
+    background-color: tomato;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+}
+.books{
+    border-radius: 10px;
+    background-color: wheat;
+    img{
+        width: 30%;
+    }
+}
+

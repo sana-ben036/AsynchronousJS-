@@ -4,10 +4,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Bibliothèque en ligne</title>
 </head>
 
 <body>
+
+    <nav>
+        <img class="logo" src="./img/android-chrome-512x512.png" alt="logo">
+        <div class="menu">
+            <img class="menu_item menu_item--with" src="./img/iconfinder_6_2135933.svg" alt="news letter">
+            <img class="menu_item" src="./img/iconfinder_78-instagram_104425.svg" alt="instagram">
+            <img class="menu_item"src="./img/iconfinder_43-twitter_104461.svg" alt="twitter">
+            <p>news letter</p>
+        
+        </div>        
+    </nav>
+    <div class="search">
+        <p>Looking for your e-book</p>
+        <form action="/db.json">
+            <label for="books">Choose a language:</label>
+            <select id="language" name="language">
+              <option value="Arabic">Arabic</option>
+              <option value="English">English</option>
+              <option value="French">French</option>
+              <option value="Danish">Danish</option>
+            </select>
+            <input type="submit">
+          </form>
+        <input type="checkbox">
+
+    </div>
+    <div class="books">
+        <img src="./img/9782823873009ORI.jpg" alt="">
+        <img src="./img/9782348057175ORI.jpg" alt="">
+        <img src="./img/9782348057243ORI.jpg" alt="">
+        <img src="./img/9782221249130ORI.jpg" alt="">
+        <img src="./img/9782823874761ORI.jpg" alt="">
+        <img src="./img/9782823876086ORI.jpg" alt="">
+        
+
+    </div>
+
+    
+
+
+
+
+
+
+
+
+
+
     <script src="index.js"></script>
 </body>
 

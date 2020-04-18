@@ -1,0 +1,76 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 80%;
+  font-family: Cairo;
+  font-size: 1.5em;
+  margin: auto;
+  text-align: center;
+}
+
+nav {
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+}
+
+nav .menu {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+nav .menu_item--with {
+  width: 22%;
+}
+
+nav .menu p {
+  font-size: small;
+  font-weight: bold;
+  position: relative;
+  top: 100px;
+  right: 180px;
+}
+
+nav .logo {
+  width: 20%;
+}
+
+.search {
+  height: 200px;
+  background-color: tomato;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+.books {
+  border-radius: 10px;
+  background-color: wheat;
+}
+
+.books img {
+  width: 30%;
+}
+/*# sourceMappingURL=style.css.map */
