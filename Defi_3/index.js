@@ -1,11 +1,13 @@
 
+//----------------- afficher all books  (get)------------------------------------
+
 var showlist= document.getElementById('show');
-var xhr= new XMLHttpRequest();
+var xhr1= new XMLHttpRequest();
 showlist.addEventListener('click',showList);
 
 function showList(){
 
-xhr.onload= function(){
+xhr1.onload= function(){
     var data = this.response;
     if(data.length>0){
         var output= "";
@@ -28,10 +30,98 @@ xhr.onload= function(){
         document.getElementById("data").innerHTML= output;
     }
 };
-xhr.open('get','http://localhost:3000/books');
-xhr.responseType='json';
-xhr.send();
+xhr1.open('get','http://localhost:3000/books');
+xhr1.responseType='json';
+xhr1.send();
 }
+
+// -------------------add new book  (post)---------------------
+
+var FormData = {};
+
+FormData["id"] = 21;
+FormData["author"] = "sana";
+FormData["country"] = "morocco";
+FormData["imageLink"] = "";
+FormData["language"] = "arabic",
+FormData["link"] = ""; 
+FormData["pages"] =""; 
+FormData["title"] ="biography"; 
+FormData["year"] =2020; 
+
+ const jasonString = JSON.stringify(FormData);
+ var xhr2= new XMLHttpRequest();
+
+
+
+ xhr2.open('POST','http://localhost:3000/books');
+ xhr2.setRequestHeader('Content-Type','application/json');
+ xhr2.send(jasonString)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*function newBook(){
+
+    var FormData = {};
+
+    FormData["id"] = document.getElementById("id").value;
+    FormData["author"] = document.getElementById("author").value;
+    FormData["country"] = document.getElementById("country").value;
+    FormData["imageLink"] = document.getElementById("imageLink").value;
+    FormData["language"] = document.getElementById("language").value;
+    FormData["link"] = document.getElementById("link").value;
+    FormData["pages"] = document.getElementById("pages").value;
+    FormData["title"] = document.getElementById("title").value;
+    FormData["year"] = document.getElementById("year").value;
+
+    return newBook();
+
+    
+}
+*/
+
+
+
+
+/*var submit= document.getElementById("send")
+submit.addEventListener('click',sendBook);
+
+function sendBook(){
+
+    var toSend = {
+        id:21,
+        author:"sana"
+    };
+ const jasonString = JSON.stringify(toSend);
+ var xhr2= new XMLHttpRequest();
+
+
+
+ xhr2.open('POST','http://localhost:3000/books');
+ xhr2.setRequestHeader('Content-Type','application/json');
+ xhr2.send(jasonString)
+}
+*/
 
 
 

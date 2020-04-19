@@ -22,7 +22,7 @@
     </nav>
     <div class="search">
         <div class="container">
-            <form class="addbook" id="form">
+            <form class="addbook" onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
                 <p>Add a book</p>
                 <input type="text" placeholder="id" id="id">
                 <input type="text" placeholder="author" id="author">
@@ -33,7 +33,7 @@
                 <input type="text" placeholder="pages" id="pages">
                 <input type="text" placeholder="title" id="title">
                 <input type="text" placeholder="year" id="year">
-                <input type="submit">
+                <input type="submit" value="Submit" id="send">
             </form>
             <div class="findbook">
                 <p>Find a book</p>
@@ -49,7 +49,7 @@
 
         </div>
         
-        <table class="table">
+        <table class="table" id="listbook">
             <thead>
                 <tr>
                     <th>Id</th>
