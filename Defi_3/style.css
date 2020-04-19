@@ -64,16 +64,19 @@ nav .logo {
   font-weight: bold;
 }
 
-.books {
-  border-radius: 10px;
-  background-color: wheat;
+.search .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-.books img {
+.search .container .addbook, .search .container .findbook, .search .container .showbook {
   width: 30%;
-}
-
-.addbook, .findbook {
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -83,19 +86,31 @@ nav .logo {
           flex-direction: column;
 }
 
-.addbook input, .findbook input, .addbook p, .findbook p {
-  width: 20%;
-  margin: 5px;
+.search .container .addbook input, .search .container .findbook input, .search .container .showbook input, .search .container .addbook p, .search .container .findbook p, .search .container .showbook p {
+  width: 70%;
+  margin: 5px auto;
   border-radius: 5px;
 }
 
-.table {
+.search .table {
   margin: auto;
   font-size: small;
   font-weight: normal;
 }
 
-.table th, .table tr {
+.search .table th, .search .table tr {
   border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  height: 50px;
+  width: 150px;
+}
+
+.books {
+  border-radius: 10px;
+  background-color: wheat;
+}
+
+.books img {
+  width: 30%;
 }
 /*# sourceMappingURL=style.css.map */

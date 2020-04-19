@@ -47,6 +47,37 @@ nav{
     border-radius: 10px;
     color: white;
     font-weight: bold;
+    .container{
+        display: flex;
+        flex-direction: row;
+        .addbook{
+            width: 30%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            input,p{
+                width: 70%;
+                margin: 5px auto;
+                border-radius: 5px;
+            }
+            
+        }
+        .findbook,.showbook{
+            @extend .addbook;
+        }
+
+    }
+    .table{
+        margin: auto;
+        font-size: small;
+        font-weight: normal;
+        th,tr{
+            border-bottom: 1px solid black;
+            border-top: 1px solid black;
+            height: 50px;
+            width: 150px;
+        }
+    }
 }
 .books{
     border-radius: 10px;
@@ -55,24 +86,5 @@ nav{
         width: 30%;
     }
 }
-.addbook{
-    display: flex;
-    flex-direction: column;
-    input,p{
-        width: 20%;
-        margin: 5px;
-        border-radius: 5px;
-    }
-    
-}
-.findbook{
-    @extend .addbook;
-}
-.table{
-    margin: auto;
-    font-size: small;
-    font-weight: normal;
-    th,tr{
-        border-bottom: 1px solid black;
-    }
-}
+
+
