@@ -42,7 +42,7 @@ nav{
 
 }
 .search{
-    height: 200px;
+    //height: 200px;
     background-color: tomato;
     border-radius: 10px;
     color: white;
@@ -55,4 +55,24 @@ nav{
         width: 30%;
     }
 }
-
+.addbook{
+    display: flex;
+    flex-direction: column;
+    input,p{
+        width: 20%;
+        margin: 5px;
+        border-radius: 5px;
+    }
+    
+}
+.findbook{
+    @extend .addbook;
+}
+.table{
+    margin: auto;
+    font-size: small;
+    font-weight: normal;
+    th,tr{
+        border-bottom: 1px solid black;
+    }
+}

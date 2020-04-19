@@ -58,7 +58,6 @@ nav .logo {
 }
 
 .search {
-  height: 200px;
   background-color: tomato;
   border-radius: 10px;
   color: white;
@@ -72,5 +71,31 @@ nav .logo {
 
 .books img {
   width: 30%;
+}
+
+.addbook, .findbook {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.addbook input, .findbook input, .addbook p, .findbook p {
+  width: 20%;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.table {
+  margin: auto;
+  font-size: small;
+  font-weight: normal;
+}
+
+.table th, .table tr {
+  border-bottom: 1px solid black;
 }
 /*# sourceMappingURL=style.css.map */

@@ -21,18 +21,47 @@
         </div>        
     </nav>
     <div class="search">
-        <p>Looking for your e-book</p>
-        <form action="/db.json">
-            <label for="books">Choose a language:</label>
-            <select id="language" name="language">
-              <option value="Arabic">Arabic</option>
-              <option value="English">English</option>
-              <option value="French">French</option>
-              <option value="Danish">Danish</option>
-            </select>
+        
+        <form class="addbook" id="form">
+            <p>Add a book</p>
+            <input type="text" placeholder="id" id="id">
+            <input type="text" placeholder="author" id="author">
+            <input type="text" placeholder="country" id="country">
+            <input type="text" placeholder="imageLink" id="imageLink">
+            <input type="text" placeholder="language" id="langauge">
+            <input type="text" placeholder="link" id="link">
+            <input type="text" placeholder="pages" id="pages">
+            <input type="text" placeholder="title" id="title">
+            <input type="text" placeholder="year" id="year">
             <input type="submit">
-          </form>
-        <input type="checkbox">
+        </form>
+        <div class="findbook">
+            <p>Find a book</p>
+            <input type="text" placeholder="by Id">
+            <input type="text" placeholder="by Name">
+            <input type="submit">
+
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>author</th>
+                    <th>country</th>
+                    <th>imageLink</th>
+                    <th>langauge</th>
+                    <th>link</th>
+                    <th>pages</th>
+                    <th>title</th>
+                    <th>year</th>
+                </tr>
+            </thead>
+            <tbody id="data">
+
+            </tbody>
+        </table>
+        
+          
 
     </div>
     <div class="books">
@@ -45,6 +74,7 @@
         
 
     </div>
+    
 
     
 
