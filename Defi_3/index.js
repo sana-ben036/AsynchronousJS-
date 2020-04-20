@@ -46,7 +46,7 @@ var xhr2= new XMLHttpRequest();
 
 function addBook(){
 
-    var newBook = {
+    var book = {
         "id" : 21,
         "author" : "samia",
         "country" : "morocco",
@@ -59,7 +59,7 @@ function addBook(){
     
     };
 
-    const jasonString = JSON.stringify(newBook);
+    const jasonString = JSON.stringify(book);
 
     
         
@@ -85,7 +85,7 @@ var xhr3= new XMLHttpRequest();
 
 function updateBook(){
 
-    var newBook = {
+    var book = {
         "id" : 21,
         "author" : "sana BENGANNOUNE",
         "country" : "morocco",
@@ -98,14 +98,32 @@ function updateBook(){
     
     };
 
-const jasonString = JSON.stringify(newBook);
+const jasonString = JSON.stringify(book);
 
 xhr3.open('PuT','http://localhost:3000/books/21');
 xhr3.setRequestHeader('Content-Type','application/json');
 xhr3.send(jasonString)
 }
 
+// -------------------update a book  (delete)---------------------
 
+var delet= document.getElementById('delet');
+delet.addEventListener('click',deletBook);
+var xhr4= new XMLHttpRequest();
+
+function deletBook(){
+
+    var book={};
+
+
+
+
+const jasonString = JSON.stringify(book);
+
+xhr4.open('DELETe','http://localhost:3000/books/1');
+xhr4.setRequestHeader('Content-Type','application/json');
+xhr4.send()
+}
 
 
 

@@ -61,7 +61,7 @@ nav{
         }
         
     }
-    .findbook,.showbook,.updatbook{
+    .deletbook,.showbook,.updatbook{
         @extend .addbook;
     }
 }

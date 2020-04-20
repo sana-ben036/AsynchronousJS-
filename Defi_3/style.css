@@ -72,7 +72,7 @@ nav .logo {
           flex-direction: row;
 }
 
-.search .addbook, .search .findbook, .search .showbook, .search .updatbook {
+.search .addbook, .search .deletbook, .search .showbook, .search .updatbook {
   width: 30%;
   margin: auto;
   display: -webkit-box;
@@ -84,7 +84,7 @@ nav .logo {
           flex-direction: column;
 }
 
-.search .addbook input, .search .findbook input, .search .showbook input, .search .updatbook input, .search .addbook p, .search .findbook p, .search .showbook p, .search .updatbook p {
+.search .addbook input, .search .deletbook input, .search .showbook input, .search .updatbook input, .search .addbook p, .search .deletbook p, .search .showbook p, .search .updatbook p {
   width: 70%;
   margin: 5px auto;
   border-radius: 5px;
