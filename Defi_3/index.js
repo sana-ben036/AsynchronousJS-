@@ -1,9 +1,10 @@
 
 //----------------- afficher all books  (get)------------------------------------
 
-var showlist= document.getElementById('show');
+var show= document.getElementById('show');
+show.addEventListener('click',showList);
+
 var xhr1= new XMLHttpRequest();
-showlist.addEventListener('click',showList);
 
 function showList(){
 
@@ -37,26 +38,75 @@ xhr1.send();
 
 // -------------------add new book  (post)---------------------
 
-var FormData = {};
-
-FormData["id"] = 21;
-FormData["author"] = "sana";
-FormData["country"] = "morocco";
-FormData["imageLink"] = "";
-FormData["language"] = "arabic",
-FormData["link"] = ""; 
-FormData["pages"] =""; 
-FormData["title"] ="biography"; 
-FormData["year"] =2020; 
-
- const jasonString = JSON.stringify(FormData);
- var xhr2= new XMLHttpRequest();
 
 
+var add= document.getElementById('add');
+add.addEventListener('click',addBook);
+var xhr2= new XMLHttpRequest();
 
- xhr2.open('POST','http://localhost:3000/books');
- xhr2.setRequestHeader('Content-Type','application/json');
- xhr2.send(jasonString)
+function addBook(){
+
+    var newBook = {
+        "id" : 21,
+        "author" : "samia",
+        "country" : "morocco",
+        "imageLink" : "",
+        "language" : "arabic",
+        "link" : "",
+        "pages":"", 
+        "title":"biography",
+        "year" :2020
+    
+    };
+
+    const jasonString = JSON.stringify(newBook);
+
+    
+        
+    
+
+xhr2.open('POST','http://localhost:3000/books');
+xhr2.setRequestHeader('Content-Type','application/json');
+xhr2.send(jasonString)
+
+
+}
+
+    
+
+
+
+
+// -------------------update a book  (put)---------------------
+
+var update= document.getElementById('update');
+update.addEventListener('click',updateBook);
+var xhr3= new XMLHttpRequest();
+
+function updateBook(){
+
+    var newBook = {
+        "id" : 21,
+        "author" : "sana BENGANNOUNE",
+        "country" : "morocco",
+        "imageLink" : "",
+        "language" : "arabic",
+        "link" : "",
+        "pages":"300", 
+        "title":"biography",
+        "year" :2020
+    
+    };
+
+const jasonString = JSON.stringify(newBook);
+
+xhr3.open('PuT','http://localhost:3000/books/21');
+xhr3.setRequestHeader('Content-Type','application/json');
+xhr3.send(jasonString)
+}
+
+
+
 
 
 

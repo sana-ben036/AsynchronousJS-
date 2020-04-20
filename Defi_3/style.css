@@ -62,9 +62,7 @@ nav .logo {
   border-radius: 10px;
   color: white;
   font-weight: bold;
-}
-
-.search .container {
+  margin: 10px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -74,7 +72,7 @@ nav .logo {
           flex-direction: row;
 }
 
-.search .container .addbook, .search .container .findbook, .search .container .showbook {
+.search .addbook, .search .findbook, .search .showbook, .search .updatbook {
   width: 30%;
   margin: auto;
   display: -webkit-box;
@@ -86,31 +84,22 @@ nav .logo {
           flex-direction: column;
 }
 
-.search .container .addbook input, .search .container .findbook input, .search .container .showbook input, .search .container .addbook p, .search .container .findbook p, .search .container .showbook p {
+.search .addbook input, .search .findbook input, .search .showbook input, .search .updatbook input, .search .addbook p, .search .findbook p, .search .showbook p, .search .updatbook p {
   width: 70%;
   margin: 5px auto;
   border-radius: 5px;
 }
 
-.search .table {
+.table {
   margin: auto;
   font-size: small;
   font-weight: normal;
 }
 
-.search .table th, .search .table tr {
+.table th, .table tr {
   border-bottom: 1px solid black;
   border-top: 1px solid black;
   height: 50px;
   width: 150px;
-}
-
-.books {
-  border-radius: 10px;
-  background-color: wheat;
-}
-
-.books img {
-  width: 30%;
 }
 /*# sourceMappingURL=style.css.map */
