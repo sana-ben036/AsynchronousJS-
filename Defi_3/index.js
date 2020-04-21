@@ -262,3 +262,92 @@ function deletBook(){
 
 // 3- methode async/await:
 //----------------- afficher all books  (get)------------------------------------
+
+let url = "http://localhost:3000/books"
+var show = document.getElementById('show')
+show.addEventListener('click',showList)
+
+function showList(){
+
+    async function fetchBook(){
+        let res = await fetch(url)
+        let data = await res.json()
+
+        var output= "";
+        data.forEach((u)=>{
+            output += `<tr>`;
+            output += `<td>${u.id}</td>`;
+            output += `<td>${u.author}</td>`;
+            output += `<td>${u.country}</td>`;
+            output += `<td>${u.imageLink}</td>`;
+            output += `<td>${u.language}</td>`;
+            output += `<td>${u.link}</td>`;
+            output += `<td>${u.pages}</td>`;
+            output += `<td>${u.title}</td>`;
+            output += `<td>${u.year}</td></tr>`;
+        })
+        document.getElementById("data").innerHTML= output;
+
+        return data;
+    }
+    async function main(){
+        try{
+            let data = await fetchBook()
+            console.log(data)
+        }catch (err){
+            console.error(err)
+        }
+    
+    }main()
+
+}
+/*
+//----------------- afficher all books  (post)   pas encore------------------------------------
+
+//let url = "http://localhost:3000/books"
+var add = document.getElementById('add')
+add.addEventListener('click',addBook)
+
+function addBook(){
+
+    async function fetchBook(book){
+        let res = await fetch(url,settings)
+        let book ={
+            "id" : 21,
+            "author" : "sana",
+            "country" : "morocco",
+            "imageLink" : "",
+            "language" : "arabic",
+            "link" : "",
+            "pages":"300", 
+            "title":"biography",
+            "year" :2020
+        }
+
+        
+        const settings = {
+            method: 'POST',
+            body: JSON.stringify(book),
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json',
+            }
+        }
+        async function main(){
+            try{
+                let data = await fetchBook()
+                console.log(data)
+            }catch (err){
+                console.error(err)
+            }
+        
+        }main()
+
+    
+
+    }
+}
+
+
+
+
